@@ -12,4 +12,4 @@ In the past, I shied away from the field of technology. I did not feel that I wo
 
 I soon began to research multiple software engineering bootcamp programs, which ultimately led me to Flatiron School. I read various testimonials from Flatiron bootcamp graduates, reviewed their student outcomes report, and completed several lessons in the Bootcamp Prep. My experience with the Bootcamp Prep helped me to gain the courage to apply to the Community Powered Bootcamp program. I decided upon this path because of its well-rounded curriculum and flexibility (I am a mother of a toddler).
 
-So far, things are going very well! Flatiron has recently started a hub here in Atlanta and I am excited about connecting with more local students and visiting the campus which will be unveiled in November 2018. 
+So far, things are going very well! Flatiron has recently started a hub here in Atlanta and I am excited about connecting with more local students and visiting the campus which will be unveiled in November 2018.  
