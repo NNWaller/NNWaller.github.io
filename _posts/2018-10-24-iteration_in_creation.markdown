@@ -29,7 +29,7 @@ Here, I have applied the .each iterator to my creation array. I opened the block
 
 I declared a local variable “item” and enclosed it inside of a set of pipes. The variable name in the pipes is arbitrary. Any name would be just fine.
 
-The .each iterator will cause every single item in the collection to be set equal to the variable in the pipes | | and passed into the block of code. A block is a chunk of code between braces { }. Each time the block of code is run is considered an iteration. 
+The .each iterator will cause every single item in the collection to be set equal to the variable in the pipes and passed into the block of code. A block is a chunk of code between braces { }. Each time the block of code is run is considered an iteration. 
 
 Here are the results of running this operation.
 
