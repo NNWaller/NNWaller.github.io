@@ -13,7 +13,7 @@ There are several methods called iterators that can be performed on arrays or ha
 When I first encountered the concept of iteration, it brought to mind the account of creation from the book of Genesis. I could imagine God sitting in front of a dark, empty terminal screen coding creation; from nothing to something. Listed below, I have an array of a few items from the account of creation:
 
 ```
-creation = ["day", "night", “sky”, ”land", “sea”
+creation = ["day", "night", “sky”, ”land", “sea”]
 ```
 
 If I want to easily create a phrase about each item in this array, here is the code I will use:
