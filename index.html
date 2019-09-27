@@ -1,36 +1,65 @@
----
-layout: page
----
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="This is the AMP Boilerplate.">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preload" src="img/album-background-blank-1089842.jpg" as="image">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style amp-custom>
+    /* Add your styles here */
+    
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+ 
+    <link rel="canonical" href=".">
+    <title>Natasha Waller Software Engineer</title>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Webpage",
+          "url": "https://NNWaller.github.io",
+          "name": "Natasha Waller Profile",
+          "headline": "Natasha Waller",
+          "description": "Portfolio site for Natasha Waller.",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://NNWaller.github.io"
+          },
+          "publisher": {
+            "@type": "Individual",
+            "name": "Natasha Waller",
+          },
+        }
+        </script>
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <amp-img src="img/album-background-blank-1089842.jpg"
+            width="1280" 
+            height="720"
+            layout="responsive" 
+            srcset="img/album-background-blank-1089842.jpg 640w, img/album-background-blank-1089842.jpg 320w"
+            alt="Office supplies on a wooden background. Photo by Dominika Roseclay from Pexels.">
+      </amp-img>
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    {{ post.excerpt }}
-    <p class="post-meta">Posted by {% if site.author %}{{ site.author }}{% else %}{{ site.github_username }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
+      <h1 style="font-family:'Shadows Into Light', cursive; font-size: 50px;">Natasha Waller</h1>
+  
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                 Vestibulum lectus mauris ultrices eros in cursus. Sed euismod nisi porta lorem mollis aliquam ut. 
+                 Vitae congue eu consequat ac felis donec et odio. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim.</p>
+       
+    
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+    </main>
+    <section>
+
+    </section>
+  </body>
+</html>
