@@ -2,17 +2,66 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1">
     <meta name="description" content="This is the AMP Boilerplate.">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-    <link rel="preload" src="img/album-background-blank-1089842.jpg" as="image">
+    <link rel="preload" src="img/4k-wallpaper-close-up-dew-807598.jpg" as="image">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <!-- Import other AMP Extensions here -->
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Philosopher&display=swap" rel="stylesheet">
     <style amp-custom>
     /* Add your styles here */
+
+    .viewport-100 {
+              height: 120vh;
+              background-color: var(--color-secondary);
+            }
+
+    main {
+              background-image: 
+              url(img/4k-wallpaper-close-up-dew-807598.jpg);
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              text-align: center;
+              
+            }
+
+            .headerbar {
+              line-height: 60px;
+              height: 60px;
+              color:rgb(94, 114, 82);
+              font-size: 35px;
+              background-color: peachpuff;
+            }
     
+    .container {
+       
+        justify-content: center;
+        text-align: center;
+    }
+
+    .block {
+        position:relative;
+        margin:10px, 0px;
+    
+    }
+
+    #story {
+        font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
+        font-size: 30px;
+
+    }
+    
+    #projects {
+        background-color: peachpuff;
+        font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
+        font-size: 30px;
+
+    }
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
  
@@ -35,31 +84,81 @@
             "name": "Natasha Waller",
           },
         }
-        </script>
+     </script>
   </head>
   <body>
-    <header>
-    </header>
+        <header class="headerbar">
+                <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
+            </header>
+
+            <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color: peachpuff;">
+                <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(94, 114, 82); font-size: 30px;">X</div>
+                <nav class="nav">
+                    <ul class="label">
+                        <li class="nav-item">
+                            <a href="#story" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px;">My Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#areas-of-practice" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px; padding-inline: 3px">My Projects</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+
+                <ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb4" style="list-style: none;">
+                  <li>
+                      <a href="https://twitter.com/CodeWoman37" target="_blank" class="inline-block p1" aria-label="Link to Nataha Waller's Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 53 49"><title>Twitter</title><path d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6" class="ampstart-icon ampstart-icon-twitter"></path></svg></a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/NNWaller" target="_blank" class="inline-block p1" aria-label="Link to Natasha Waller's GitHub"><amp-img src="img/GitHub-Mark-64px.png" width="35" height="30"></amp-img><svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 56 55"><title>GitHub</title></svg></a>
+                  </li>
+                
+                <li>
+                <a href="https://www.linkedin.com/in/natashanichole" target="_blank" class="inline-block p1" aria-label="Link to Natasha Waller's LinkedIn"><amp-img src="img/LI-In-Bug.png" width="35" height="30"></amp-img><svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 56 55"><title>LinkedIn</title></svg></a>
+                </li>
+                <li>
+                      <a href="mailto:nnwaller@gmail.com" target="_blank" class="inline-block p1" aria-label="Link to Send Natasha Waller an Email"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 56 43"><title>Email</title><path d="M10.5 6.4C9.1 6.4 8 7.5 8 8.9v21.3c0 1.3 1.1 2.5 2.5 2.5h34.9c1.4 0 2.5-1.2 2.5-2.5V8.9c0-1.4-1.1-2.5-2.5-2.5H10.5zm2.1 2.5h30.7L27.9 22.3 12.6 8.9zm-2.1 1.4l16.6 14.6c.5.4 1.2.4 1.7 0l16.6-14.6v19.9H10.5V10.3z" class="ampstart-icon ampstart-icon-email"></path></svg></a>
+                  </li>
+              </ul>
+              
+            </amp-sidebar>
     <main>
-      <amp-img src="img/album-background-blank-1089842.jpg"
-            width="1280" 
-            height="720"
-            layout="responsive" 
-            srcset="img/album-background-blank-1089842.jpg 640w, img/album-background-blank-1089842.jpg 320w"
-            alt="Office supplies on a wooden background. Photo by Dominika Roseclay from Pexels.">
-      </amp-img>
-
-      <h1 style="font-family:'Shadows Into Light', cursive; font-size: 50px;">Natasha Waller</h1>
+    <div class="viewport-100"> 
+      
+      <div class="container">
+          <div class="block">
+                <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color: peachpuff"><strong>Software Engineer In The Making</strong></p>
+            
+      <h1 style="font-family:'Kaushan Script', cursive; font-size: 70px; color: peachpuff">Natasha Waller</h1>
   
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                 Vestibulum lectus mauris ultrices eros in cursus. Sed euismod nisi porta lorem mollis aliquam ut. 
-                 Vitae congue eu consequat ac felis donec et odio. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim.</p>
+     
+  
        
-    
-
+      </div>
+    </div>
+  </div>
     </main>
-    <section>
+    <section id="story">
+      <h2 style="font-family:'Kaushan Script', cursive; font-size: 40px;"><strong>My Story</strong></h2>
+       <p>Carl Bard said, “Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.” These words eloquently sum up how I feel about pursuing a career as a software engineer/web developer.</p> 
+           
+            <p>I have always enjoyed solving problems and making things easier for others. The majority of my employment experience has been in the field of customer service. I have earned a bachelors degree in Family and Consumer Sciences from The University of Georgia. I have also completed a Masters Degree in Business Administration from Augsburg College and am a member of Women Who Code Atlanta.
+            </p>
+           
+            <p>I have become very proficient in Ruby. I also have some experience with HTML, CSS, the AMP web component framework, and JavaScript. I am currently learning more about Ruby on Rails, MongoDB, Blockchain Technology, and testing with RSpec and Capybara. 
+                </p>
+    </section>
 
+    <section id="projects">
+            
+          <amp-img
+            src="img/aroma-bloom-158277.jpg"
+            width="200"
+            height="300"
+            layout="responsive">
+        </amp-img>
+            
+    
     </section>
   </body>
 </html>
