@@ -9,7 +9,8 @@
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js">
+    </script>
     <!-- Import other AMP Extensions here -->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Philosopher&display=swap" rel="stylesheet">
     <style amp-custom>
@@ -37,6 +38,11 @@
               font-size: 35px;
               background-color: peachpuff;
             }
+            .nav-item {
+                list-style-type:none;
+                margin: 5px 10px 10px 0px;
+
+            }
     
     .container {
        
@@ -57,11 +63,63 @@
     }
     
     #projects {
-        background-color: peachpuff;
+    
         font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
         font-size: 30px;
+        background-color: white;
+        
 
     }
+
+    .project-container {
+        padding: 50px 50px;
+        text-align: center;
+       
+
+    }
+
+    .inner{
+  flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.outer {
+  height: 100px; /* adjust to your needs */
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+                a:link {
+             text-decoration: none;
+            }
+
+            a:visited {
+             text-decoration: none;
+            }
+
+            button {
+             background-color: peachpuff;
+             padding: 8px 18px;
+             border: 1px solid white;
+             border-radius: 12px;
+             cursor: pointer;
+             font-size: 20px;
+             font-family: 'Philosopher', sans-serif;
+             
+             transition: all 0.2s ease-in-out;
+           }
+
+           .parallax-image-window amp-img {
+    
+    overflow: hidden;
+  }
+
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
  
@@ -92,14 +150,14 @@
             </header>
 
             <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color: peachpuff;">
-                <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(94, 114, 82); font-size: 30px;">X</div>
+                <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(94, 114, 82); font-family:'Kaushan Script', cursive;font-size: 30px;">X</div>
                 <nav class="nav">
                     <ul class="label">
                         <li class="nav-item">
                             <a href="#story" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px;">My Story</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#areas-of-practice" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px; padding-inline: 3px">My Projects</a>
+                            <a href="#projects" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px; padding-inline: 3px">My Projects</a>
                         </li>
                         
                     </ul>
@@ -127,10 +185,11 @@
       
       <div class="container">
           <div class="block">
-                <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color: peachpuff"><strong>Software Engineer In The Making</strong></p>
+               
             
       <h1 style="font-family:'Kaushan Script', cursive; font-size: 70px; color: peachpuff">Natasha Waller</h1>
   
+      <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color: peachpuff"><strong>Software Engineer In The Making</strong></p>
      
   
        
@@ -150,15 +209,47 @@
     </section>
 
     <section id="projects">
-            
-          <amp-img
-            src="img/aroma-bloom-158277.jpg"
-            width="200"
-            height="300"
-            layout="responsive">
-        </amp-img>
-            
+        <h2 style="font-family:'Kaushan Script', cursive; font-size: 40px;"><strong>My Projects</strong></h2>
+        
+        <div class="parallax-image-window">
+                <amp-img amp-fx="parallax fade-in-scroll"
+                  data-parallax-factor="1.1"
+                  data-margin-start="10%"
+                  data-margin-end="80%"
+                  data-repeat
+                  width="649"
+                  height="432"
+                  layout="responsive"
+                  src="img/art-artistic-background-459301.jpg"
+                  alt="Dew covered purple leaf"></amp-img>
+              </div>
+        
+        
+        <div class="project-container">
+            <div class="lavender">
+                <h3><strong>Ruby CLI Project</strong></h3>
+                <p>Click here to view a brief walkthrough of the project on YouTube.</p>
+                <a href="https://www.youtube.com/watch?v=1jzktKdnjuA&t=9s"><button><strong style= "color: rgb(94, 114, 82)">Click to View</strong></button></a>
+            </div>
+        </div>
+               
+            <div class="project-container">
+                        <div>
+                                <amp-img amp-fx="fade-in"
+                                data-duration="1200ms"
+                                width="250"
+                                height="300"
+                                heights="(min-width:400px) 800px, 80%"
+                                src="img/JCW_LOGO1 (1) copy.png"
+                                alt="JCWLaw, LLC Official Logo"></amp-img>
+                            
+                        <h3><strong>Law Firm Website</strong></h3>
     
+                        <a href=#><button><strong style= "color: rgb(94, 114, 82);">COMING SOON</strong></button></a>      
+                    </div>
+    </div>
+    </div>
     </section>
+   
   </body>
 </html>
