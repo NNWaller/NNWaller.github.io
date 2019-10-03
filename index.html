@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1">
     <meta name="description" content="This is the AMP Boilerplate.">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: blob:; script-src blob: https://cdn.ampproject.org/v0.js https://cdn.ampproject.org/v0/ https://cdn.ampproject.org/viewer/ https://cdn.ampproject.org/rtv/; object-src 'none'; style-src 'unsafe-inline' https://cdn.ampproject.org/rtv/ https://cdn.materialdesignicons.com https://cloud.typography.com https://fast.fonts.net https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com https://p.typekit.net https://use.fontawesome.com https://use.typekit.net;">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-    <link rel="preload" src="img/4k-wallpaper-close-up-dew-807598.jpg" as="image">
+    <link rel="preload" href="img/beautiful-bright-clouds-414102-size1200.jpg" as="image">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js">
     </script>
     <!-- Import other AMP Extensions here -->
@@ -16,21 +18,35 @@
     <style amp-custom>
     /* Add your styles here */
 
-    main {
-      background-image: 
-      url(img/4k-wallpaper-close-up-dew-807598.jpg);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      text-align: center;  
-    }
+
+
+    
+    
+    .hero-wrapper{
+              position: relative;
+              margin:0%;
+              color: #fff;
+            }
+
+            .hero-content{
+              position: absolute;
+              margin-top: 20px;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              text-align: center;
+             
+            }
+            
 
     .headerbar {
       line-height: 60px;
       height: 60px;
-      color:rgb(94, 114, 82);
+      color:rgb(60, 69, 185);
       font-size: 35px;
-      background-color: peachpuff;
+      background-color: white;
     }
     
     .nav-item {
@@ -40,34 +56,52 @@
     }
     
     .container {
+      position:relative;
       justify-content: center;
       text-align: center;
     }
 
     .block {
-      position: relative;
+      position: absolute;
+      top: -50px;
+      
     }
 
     #story {
-      font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
-      font-size: 30px;
+      font-family:'Philosopher', sans-serif; 
+      font-size: 25px;
+    }
+
+    .story-lines {
+        margin: 8px 10px;
     }
     
     #projects {
       font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
-      font-size: 30px;
+      font-size: 25px;
       background-color: white;
     }
 
     h2 {
       font-family:'Kaushan Script', cursive; 
       font-size: 40px; 
-      background-color: peachpuff
+      color: rgb(228,96,196);
+      text-align: center;
+    
+    }
+
+    p {
+        color:rgb(60, 69, 185);
     }
 
     .project-container {
       padding: 50px 50px;
-      text-align: center;
+     text-align: center;
+      
+    }
+
+    .project-description {
+        text-align: left;
     }
 
     a:link {
@@ -80,6 +114,7 @@
 
     button {
       background-color: peachpuff;
+      color:rgb(60, 69, 185);
       padding: 8px 18px;
       border: 1px solid white;
       border-radius: 12px;
@@ -118,21 +153,21 @@
         }
      </script>
   </head>
-  
+
   <body>
    <header class="headerbar">
      <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
    </header>
 
-   <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color: peachpuff;">
-     <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(94, 114, 82); font-family:'Kaushan Script', cursive;font-size: 30px;">X</div>
+   <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color:rgb(228,96,196)">
+     <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(60, 69, 185); font-family:'Kaushan Script', cursive;font-size: 30px;">X</div>
        <nav class="nav">
          <ul class="label">
            <li class="nav-item">
-             <a href="#story" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px;">My Story</a>
+             <a href="#story" style="font-family:'Philosopher', sans-serif; color:rgb(60, 69, 185); font-size: 30px;">My Story</a>
            </li>
            <li class="nav-item">
-             <a href="#projects" style="font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82); font-size: 30px; padding-inline: 3px">My Projects</a>
+             <a href="#projects" style="font-family:'Philosopher', sans-serif; color:rgb(60, 69, 185); font-size: 30px; padding-inline: 3px">My Projects</a>
            </li>           
          </ul>
        </nav>
@@ -155,56 +190,70 @@
            </li>
          </ul> 
    </amp-sidebar>
-
+   <!-- End Navbar -->
    <main>
-     <div class="container">
-       <div class="block">
-         <h1 style="font-family:'Kaushan Script', cursive; font-size: 70px; color: peachpuff">Natasha Waller</h1>
-         <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color: peachpuff"><strong>Software Engineer In The Making</strong></p>
-       </div>
-     </div>
-   </main>
+   <div class="hero-wrapper">
+        <amp-img width="600" height="900" layout="responsive" src="img/beautiful-bright-clouds-414102-size1200.jpg" media="(max-width: 415px)" alt="Image of tree growing in midst of a body of water"></amp-img>
+        <amp-img height="1800" layout="fixed-height" src="img/beautiful-bright-clouds-414102-size600.jpg" media="(min-width: 416px)" alt="Image of tree growing in midst of a body of water"></amp-img>
+        <div class="hero-content">
+                  <h1 style="font-family:'Kaushan Script', cursive; font-size: 70px; color:peachpuff">Natasha Waller</h1>
+                  <br>
+                  <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color:peachpuff"><strong>Software Engineer In The Making</strong></p>
+        </div>
+    </div> 
+
+</main>
+   <!--This ends the code you got from AMP Start-->
   
    <section id="story">
       <h2><strong>My Story</strong></h2>
-       <p>Carl Bard said, “Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.” These words eloquently sum up how I feel about pursuing a career as a software engineer/web developer.</p> 
+      <div class="story-lines">
+       <p >Carl Bard said, “Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.” These words eloquently sum up how I feel about pursuing a career as a software engineer.</p> 
            
-            <p>I have always enjoyed solving problems and making things easier for others. The majority of my employment experience has been in the field of customer service. I have earned a bachelors degree in Family and Consumer Sciences from The University of Georgia. I have also completed a Masters Degree in Business Administration from Augsburg College and am a member of Women Who Code Atlanta.
+            <p>I have always enjoyed solving problems and making things easier for others. The majority of my employment experience has been in customer service within the hospitality, insurance, and banking industries. I have earned a bachelors degree in Family and Consumer Sciences from The University of Georgia and completed a Masters Degree in Business Administration from Augsburg College. For the past year, I have been teaching myself to become a software engineer by using various online resources.
             </p>
            
-            <p>I have become very proficient in Ruby. I also have some experience with HTML, CSS, the AMP web component framework, and JavaScript. I am currently learning more about Ruby on Rails, MongoDB, Blockchain Technology, and testing with RSpec and Capybara. 
-                </p>
-    </section>
+            <p>My favorite programming language is Ruby. I also have some experience with JavaScript, HTML and CSS. I am strengthening my skills in Rails, RSpec, Capybara, and MongoDB. I also have plans to learn GoLang and Angular in the near future. Blockchain and AI technologies have captured my interest, so I try and stay informed on those topics as well.</p>
+ </div>
+        </section>
    
 
     <section id="projects">
       <h2><strong>My Projects</strong></h2>
         <div class="project-container">
-          <amp-img amp-fx="fly-in-right"
-            data-fly-in-distance="80%"
+          <amp-img amp-fx="fade-in"
+            data-duration="1200ms"
             width="250"
             height="300"
             heights="(min-width:400px) 800px, 80%"
             src="img/access-blur-close-up-1181271.jpg"
             alt="Laptop with Ruby language code on screen">
           </amp-img>
-          <h3><strong>Ruby CLI Project</strong></h3>
-            <p>Click here to view a brief walkthrough of the project on YouTube.</p>
-              <a href="https://www.youtube.com/watch?v=1jzktKdnjuA&t=9s"><button><strong style= "color: rgb(94, 114, 82)">Click to View</strong></button></a>
+          <figcaption style="font-size:12px">Photo by Christina Morillo from Pexels</figcaption>
+          <p style="font-size: 35px; color:rgb(60, 69, 185);"><strong>Ruby CLI Project</strong></p>
+          <div class="project-description">
+            <p> I created a Ruby Command Line Interface application that utilizes Nokogiri to provide data from Aura Cacia's website about essential oils.</p>
+            </div>  
+            <a href="https://www.youtube.com/watch?v=1jzktKdnjuA&t=9s"><button><strong>View Video Walkthrough</strong></button></a>
         </div>
 
         <div class="project-container">
-          <amp-img amp-fx="fly-in-left"
-            data-fly-in-distance="80%"
+           
+          <amp-img amp-fx="fade-in"
+            data-duration="1200ms"
             width="250"
             height="300"
             heights="(min-width:400px) 800px, 80%"
-            src="img/Screenshot of My Profile Site.png"
-            alt="Laptop with Ruby language code on screen">
+            src="img/beautiful-bright-clouds-414102-size1200.jpg"
+            alt="Image of tree growing in midst of a body of water">
           </amp-img>
-          <h3><strong>My Portfolio Site</strong></h3>
-            <p>Click here to view the code for the webpage you are viewing.</p>
-              <a href="https://github.com/NNWaller/NNWaller.github.io"><button><strong style= "color: rgb(94, 114, 82)">Click to View</strong></button></a>
+          <figcaption style="font-size:12px">Photo by Pixabay from Pexels</figcaption>
+         
+          <p style="font-size: 35px; color:rgb(60, 69, 185);"><strong>My Portfolio Site</strong></p>
+          <div class="project-description">
+            <p>I used the Accelerated Mobile Pages (AMP) web component framework to build the portfolio site you are viewing. Click the button below to view the code on GitHub.</p>
+          </div>
+            <a href="https://github.com/NNWaller/NNWaller.github.io" target="_blank"><button><strong>View on Github</strong></button></a>
         
         </div>
                
@@ -213,17 +262,23 @@
             data-duration="1200ms"
             width="250"
             height="300"
-            heights="(min-width:400px) 800px, 80%"
+            heights="(min-width:500px) 800px, 80%"
             src="img/JCW_LOGO1 (1) copy.png"
             alt="JCWLaw, LLC Official Logo">
           </amp-img>
-          <h3><strong>Law Firm Website</strong></h3>
-            <p>Official business site for JCWLaw, LLC based in Atlanta, Georgia.</p>
-              <a href=#><button><strong style= "color: rgb(94, 114, 82);">COMING SOON</strong></button></a>      
+          <figcaption style="font-size:12px">Official logo of JCWLaw, LLC.</figcaption>
+          <p style="font-size: 35px; color:rgb(60, 69, 185);"><strong>Law Firm Website</strong></p>
+          <div class="project-description">
+            <p>This will be the official business website for JCWLaw, LLC based in Atlanta, Georgia.</p>
+            </div>
+              <a href=# target="_blank"><button><strong>COMING SOON</strong></button></a>      
         </div>
     </section>
+    
 
-    <footer>&copy;Natasha N. Waller 2019</footer>
+
+    <footer style="font-family:'Philosopher', sans-serif; color: rgb(94, 114, 82);text-align: center">&copy;Natasha N. Waller 2019</footer>
+
 
   </body>
 </html>
