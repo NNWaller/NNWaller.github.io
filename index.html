@@ -6,7 +6,6 @@
     <meta name="description" content="This is the AMP Boilerplate.">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: blob:; script-src blob: https://cdn.ampproject.org/v0.js https://cdn.ampproject.org/v0/ https://cdn.ampproject.org/viewer/ https://cdn.ampproject.org/rtv/; object-src 'none'; style-src 'unsafe-inline' https://cdn.ampproject.org/rtv/ https://cdn.materialdesignicons.com https://cloud.typography.com https://fast.fonts.net https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com https://p.typekit.net https://use.fontawesome.com https://use.typekit.net;">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-    <link rel="preload" href="img/beautiful-bright-clouds-414102-size1200.jpg" as="image">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
@@ -14,7 +13,8 @@
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js">
     </script>
     <!-- Import other AMP Extensions here -->
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Caslon+Display&display=swap" rel="stylesheet">
+
     <style amp-custom>
     /* Add your styles here */
     
@@ -26,20 +26,20 @@
 
     .hero-content{
       position: absolute;
-      margin-top: 20px;
+      margin-top: 250px;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width:100%;
+      height: 70%;
       padding: 0;
       text-align: center;       
     }
-            
+
 
     .headerbar {
       line-height: 60px;
       height: 60px;
-      color:rgb(60, 69, 185);
+      color:rgb(76,93,44);
       font-size: 35px;
       background-color: white;
     }
@@ -61,8 +61,9 @@
     }
 
     #story {
-      font-family:'Philosopher', sans-serif; 
+      font-family: 'Libre Caslon Display', serif; 
       font-size: 25px;
+      background-color: peachpuff;
     }
 
     .story-lines {
@@ -70,7 +71,7 @@
     }
     
     #projects {
-      font-family:'Philosopher', sans-serif; color:rgb(94, 114, 82);
+      font-family: 'Libre Caslon Display', serif; color:rgb(94, 114, 82);
       font-size: 25px;
       background-color: white;
     }
@@ -78,13 +79,18 @@
     h2 {
       font-family:'Kaushan Script', cursive; 
       font-size: 40px; 
-      color: rgb(228,96,196);
+      color:rgb(76,93,44);
       text-align: center;
     }
 
-    p {
-      color:rgb(60, 69, 185);
-    }
+    .flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
+  align-items: center;
+  background-color: aqua;
+}
 
     .project-container {
       padding: 50px 50px;
@@ -105,13 +111,13 @@
 
     button {
       background-color: peachpuff;
-      color:rgb(60, 69, 185);
+      color:rgb(76,93,44);
       padding: 8px 18px;
       border: 1px solid white;
       border-radius: 12px;
       cursor: pointer;
       font-size: 20px;
-      font-family: 'Philosopher', sans-serif;
+      font-family: 'Libre Caslon Display', serif;
       transition: all 0.2s ease-in-out;
     }
 
@@ -146,15 +152,15 @@
      <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
    </header>
 
-   <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color:rgb(228,96,196)">
-     <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(60, 69, 185); font-family:'Kaushan Script', cursive;font-size: 30px;">X</div>
+   <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left" style="background-color: rgb(229, 210, 175);">
+     <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle" style="color:rgb(76,93,44); font-family:'Kaushan Script', cursive;font-size: 30px;">X</div>
        <nav class="nav">
          <ul class="label">
            <li class="nav-item">
-             <a href="#story" style="font-family:'Philosopher', sans-serif; color:rgb(60, 69, 185); font-size: 30px;">My Story</a>
+             <a href="#story" style="font-family:'Kaushan Script', cursive;  color:rgb(76,93,44); font-size: 30px;">My Story</a>
            </li>
            <li class="nav-item">
-             <a href="#projects" style="font-family:'Philosopher', sans-serif; color:rgb(60, 69, 185); font-size: 30px; padding-inline: 3px">My Projects</a>
+             <a href="#projects" style="font-family:'Kaushan Script', cursive; color:rgb(76,93,44); font-size: 30px; padding-inline: 3px">My Projects</a>
            </li>           
          </ul>
        </nav>
@@ -180,12 +186,13 @@
    <!-- End Navbar -->
    <main>
      <div class="hero-wrapper">
-        <amp-img width="600" height="900" layout="responsive" src="img/beautiful-bright-clouds-414102-size1200.jpg" media="(max-width: 415px)" alt="Image of tree growing in midst of a body of water"></amp-img>
-        <amp-img height="1800" layout="fixed-height" src="img/beautiful-bright-clouds-414102-size600.jpg" media="(min-width: 416px)" alt="Image of tree growing in midst of a body of water"></amp-img>
+        <amp-img width="600" height="1000" layout="responsive" src="img/Medium1280x1810album-background-blank-1089842.jpg" media="(max-width: 415px)" alt="Image of whiteboard on wooden desk with office supplies. Photo by by Dominika Roseclay from Pexels."></amp-img>
+        <amp-img height="700" layout="fixed-height" src="img/Medium1280x1810album-background-blank-1089842.jpg" media="(min-width: 416px)" alt="Image of whiteboard on wooden desk with office supplies. Photo by by Dominika Roseclay from Pexels."></amp-img>
         <div class="hero-content">
-          <h1 style="font-family:'Kaushan Script', cursive; font-size: 70px; color:peachpuff">Natasha Waller</h1>
+          <amp-fit-text width="550" height="50" layout="responsive" style="font-family:'Kaushan Script', cursive; font-size: 70px; color:rgb(229, 210, 175);"><strong>Natasha Waller</strong></amp-fit-text>
           <br>
-          <p style="font-family: 'Philosopher', sans-serif; font-size: 25px; color:peachpuff"><strong>Software Engineer In The Making</strong></p>
+          <amp-fit-text width= "225" height="50" layout="intrinsic"   style="font-family:'Kaushan Script', cursive; font-size: 25px; color:rgb(76,93,44)"><strong><em>Software Engineer In The Making</em></strong></amp-fit-text>
+          
         </div>
       </div> 
    </main>
@@ -204,6 +211,17 @@
     </section>
    
  <!--End My Story Section-->
+
+ <!--Experiemental Flexbox Section-->
+
+ <div class="flex-container">
+  <div style="background-color: blue">Ruby CLI</div>
+  <div style="background-color: blue">Profile Site</div>
+  <div style="background-color: blue">JCWLaw Site</div>
+  <div style="background-color: blue">Ruby on Rails App</div>
+</div>
+
+<!--End of Experimental Section-->
     <section id="projects">
       <h2><strong>My Projects</strong></h2>
         <div class="project-container">
